@@ -1,0 +1,27 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.parent {
+  font-size: 10px;
+}
+
+h2 {
+  margin: 1rem;
+}
+.px-size {
+  font-size: 10px;
+}
+
+.rem-size {
+  font-size: 1rem;
+}
+
+.em-size {
+  font-size: 1em;
+}
