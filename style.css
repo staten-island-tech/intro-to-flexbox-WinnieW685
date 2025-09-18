@@ -4,29 +4,50 @@ body,
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-.parent {
   font-size: 10px;
+  background-color: #edd9ca;
 }
 
-h2 {
-  margin: 1rem;
-  font-size: 4rem;
-}
-.px-size {
-  font-size: 10px;
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.rem-size {
-  font-size: 1rem;
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.em-size {
-  font-size: 1em;
+.container {
+  width: 90vw;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
 }
 
-img {
-  width: 45%;
+.card {
+  width: 22%;
+  height: 40rem;
+  margin: 3rem 0;
+  border: 2px solid #e6bea2;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardtitle {
+  font-size: large;
+}
+.cardimage {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.cardrecipe {
+  font-size: medium;
 }
