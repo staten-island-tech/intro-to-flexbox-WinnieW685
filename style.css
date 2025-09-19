@@ -6,18 +6,26 @@ body,
   box-sizing: border-box;
   font-size: 10px;
   background-color: #edd9ca;
+  font-family: "DM Serif Text", serif;
 }
 
 .dm-serif-text-regular {
-  font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: normal;
+  color
 }
 
 .dm-serif-text-regular-italic {
   font-family: "DM Serif Text", serif;
   font-weight: 400;
   font-style: italic;
+}
+h1 {
+  font-size: 12rem;
+  text-align: center;
+  margin-bottom: 20rem;
+  margin-top: 10rem;
+ color: #d8b396;
 }
 
 .container {
@@ -29,7 +37,7 @@ body,
 }
 
 .card {
-  width: 22%;
+  width: 45%;
   height: 40rem;
   margin: 3rem 0;
   border: 2px solid #e6bea2;
@@ -39,15 +47,31 @@ body,
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding: auto;
+  align-items: center;
 }
 .cardtitle {
-  font-size: large;
+  font-size: 40px;
+  background-color: antiquewhite;
+  color: #d4a583;
+  text-align: center;
 }
 .cardimage {
-  width: 50%;
+  width: 25%;
   border-radius: 10px;
 }
 
 .cardrecipe {
-  font-size: medium;
+  font-size: 23px;
+  background-color: antiquewhite;
+  color: #e6b593;
+  padding-bottom: 10px;
+  padding-top: 3px;
+  text-decoration: none;
+  font-style: bold;
+  text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+}
+
