@@ -24,7 +24,7 @@ const products = [
     alt: "",
   },
   {
-    name: "COnditioner",
+    name: "Conditioner",
     price: 14.99,
     inStock: true,
     category: "Tsubaki",
@@ -169,11 +169,20 @@ function inject(item) {
   const html = `<div class="card">
         <h2 class="cardtitle">${item.name}</h2>
         <img src=${item.image} alt="">
+        <button class="add">Add to Cart</button>
         </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
 products.forEach((product) => inject(product));
 
 function addToCart() {
-  const button = document.querySelectorAll("button");
+  const button = document.querySelectorAll(".add");
+  const btnArray = Array.from(buttons);
+  btnArray.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      console.log(event.target.textContent);
+      console.log(event.target.closest(".card").getAttribute("data-title"));
+    })
+  );
 }
+addToCart();
