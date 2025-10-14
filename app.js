@@ -1,6 +1,6 @@
 const products = [
   {
-    name: "fhgj",
+    name: "Glycoic Gloss",
     price: 19.99,
     inStock: true,
     category: "Loreal",
@@ -8,7 +8,7 @@ const products = [
     alt: "",
   },
   {
-    name: "zxcv",
+    name: "Ever Pure",
     price: 23.99,
     inStock: true,
     category: "Loreal",
@@ -16,7 +16,7 @@ const products = [
     alt: "",
   },
   {
-    name: "zxcv",
+    name: "Water Treatment",
     price: 26.75,
     inStock: true,
     category: "Tsubaki",
@@ -24,7 +24,7 @@ const products = [
     alt: "",
   },
   {
-    name: "zxcv",
+    name: "COnditioner",
     price: 14.99,
     inStock: true,
     category: "Tsubaki",
@@ -32,7 +32,7 @@ const products = [
     alt: "",
   },
   {
-    name: "zxcv",
+    name: "Premium Touch",
     price: 17.99,
     inStock: true,
     category: "Fino",
@@ -40,83 +40,83 @@ const products = [
     alt: "",
   },
   {
-    name: "",
+    name: "Hair Mask",
     price: 13.0,
     inStock: true,
     category: "Fino",
-    image: "imges/Screenshot 2025-10-08 092811.png",
+    image: "imges/HairMask.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Shampoo & Conditioner",
     price: 24.5,
     inStock: true,
     category: "Pantene",
-    image: "imges/Screenshot 2025-10-08 092822.png",
+    image: "imges/ShampooAndConditioner.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Shampoo",
     price: 11.0,
     inStock: true,
     category: "Pantene",
-    image: "imges/Screenshot 2025-10-08 092846.png",
+    image: "imges/PanteneShampoo.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Advance Scalp Care",
     price: 6.99,
     inStock: true,
     category: "Head & Shoulders",
-    image: "imges/Screenshot 2025-10-08 092910.png",
+    image: "imges/AdvanceScalpCare.png",
     alt: "",
   },
   {
-    name: "",
+    name: "White Charcoal Conditioner",
     price: 12.99,
     inStock: true,
     category: "Head & Shoulders",
-    image: "imges/Screenshot 2025-10-08 092926.png",
+    image: "imges/WhiteCharcoal.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Hair Perfector",
     price: 26.75,
     inStock: true,
     category: "Olaplex",
-    image: "imges/Screenshot 2025-10-08 093004.png",
+    image: "imges/HairPerfector.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Intensive Bond Building Hair Treatment",
     price: 25.5,
     inStock: true,
     category: "Olaplex",
-    image: "imges/Screenshot 2025-10-08 093017.png",
+    image: "imges/IntensiveBondBuilding.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Biotin & Collagen",
     price: 16.99,
     inStock: true,
     category: "OGX",
-    image: "imges/Screenshot 2025-10-09 085332.png",
+    image: "imges/BiotinAndCollagen.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Coconut Oil Mist",
     price: 19.5,
     inStock: true,
     category: "OGX",
-    image: "imges/Screenshot 2025-10-09 085351.png",
+    image: "imges/CoconutOil.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Coconut Milk Shampoo",
     price: 29.25,
     inStock: true,
     category: "OGX",
-    image: "imges/Screenshot 2025-10-09 085413.png",
+    image: "imges/CoconutMilkShampoo.png",
     alt: "",
   },
   {
@@ -124,39 +124,39 @@ const products = [
     price: 17.5,
     inStock: true,
     category: "Shea Moisture",
-    image: "imges/Screenshot 2025-10-09 090144.png",
+    image: "imges/CurlEnhancingSmoothie.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Moisture Intensive Hydration Shampoo",
     price: 14.99,
     inStock: true,
     category: "Shea Moisture",
-    image: "imges/Screenshot 2025-10-09 090132.png",
+    image: "imges/SheaMoistureIntensiveHydrationShampoo.png",
     alt: "",
   },
   {
-    name: "",
+    name: "The Detangler",
     price: 20.5,
     inStock: true,
     category: "Paul Mitchell",
-    image: "imges/Screenshot 2025-10-09 085606.png",
+    image: "imges/TheDetangler.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Sheer Hydration Shampoo",
     price: 22.99,
     inStock: true,
     category: "Paul Mitchell",
-    image: "imges/Screenshot 2025-10-09 085538.png",
+    image: "imges/SheerHydrationShampoo.png",
     alt: "",
   },
   {
-    name: "",
+    name: "Firm Style",
     price: 21.25,
     inStock: true,
     category: "Pual Mitchell",
-    image: "imges/Screenshot 2025-10-09 085525.png",
+    image: "imges/FirmStyle.png",
     alt: "",
   },
 ];
@@ -170,6 +170,10 @@ function inject(item) {
         <h2 class="cardtitle">${item.name}</h2>
         <img src=${item.image} alt="">
         </div>`;
-  container.insertAdjacentHTML("afterbegin", `<h1>${item.name}</h1>`);
+  container.insertAdjacentHTML("afterbegin", html);
 }
 products.forEach((product) => inject(product));
+
+function addToCart() {
+  const button = document.querySelectorAll("button");
+}
