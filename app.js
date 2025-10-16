@@ -166,22 +166,27 @@ const products = [
 function inject(item) {
   //query the container
   const container = document.querySelector(".container");
-  const html = `<div class="card">
-        <h2 class="cardtitle">${item.name}</h2>
+  const html = `<div class="card" data-title="${item.name}" >
+        <h2 class="cardtitle" >${item.name}</h2>
         <img src=${item.image} alt="">
         <button class="add">Add to Cart</button>
         </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
+
 products.forEach((product) => inject(product));
 
 function addToCart() {
-  const button = document.querySelectorAll(".add");
+  const buttons = document.querySelectorAll(".add");
   const btnArray = Array.from(buttons);
   btnArray.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       console.log(event.target.textContent);
       console.log(event.target.closest(".card").getAttribute("data-title"));
+      //find item in array
+      //push item to cart
+      //total cart
+      //show cart
     })
   );
 }
