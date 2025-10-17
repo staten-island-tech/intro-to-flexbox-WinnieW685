@@ -191,3 +191,28 @@ function addToCart() {
   );
 }
 addToCart();
+
+// forEachbtn(addEvent)\\\
+
+//  const Allbuttons = Array.from(document.querySelectorAll("buttons”))
+// Allbuttons.forEach((button) => {
+// If (button.className = "XYZ"); {
+// button.addEventListener("click", function(event){
+// Console.log (envent.target.textContent);
+// }
+// }
+// }
+
+function category() {
+  forEach(addEvent);
+
+  const Allbuttons = document.querySelectorAll("button");
+  Allbuttons.forEach((button) => {
+    If(button.className === "container");
+    {
+      button.addEventListener("click", function (event) {
+        console.log(event.target.textContent);
+      });
+    }
+  });
+}
