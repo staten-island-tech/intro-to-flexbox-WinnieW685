@@ -192,27 +192,17 @@ function addToCart() {
 }
 addToCart();
 
-// forEachbtn(addEvent)\\\
-
-//  const Allbuttons = Array.from(document.querySelectorAll("buttons”))
-// Allbuttons.forEach((button) => {
-// If (button.className = "XYZ"); {
-// button.addEventListener("click", function(event){
-// Console.log (envent.target.textContent);
-// }
-// }
-// }
-
 function category() {
-  forEach(addEvent);
-
-  const Allbuttons = document.querySelectorAll("button");
-  Allbuttons.forEach((button) => {
-    If(button.className === "container");
-    {
-      button.addEventListener("click", function (event) {
-        console.log(event.target.textContent);
-      });
-    }
+  const allButtons = document.querySelectorAll(".category");
+  allButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      console.log(event.target.textContent);
+    });
   });
 }
+category();
+
+function finding() {
+  const  = products.filter(product => product.category === targetCategory);
+}
+finding();
