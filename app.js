@@ -202,7 +202,4 @@ function category() {
 }
 category();
 
-function finding() {
-  const  = products.filter(product => product.category === targetCategory);
-}
-finding();
+function filterByBrand(brand) {}
