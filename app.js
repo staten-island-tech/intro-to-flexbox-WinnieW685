@@ -166,9 +166,10 @@ const products = [
 function inject(item) {
   //query the container
   const container = document.querySelector(".container");
-  const html = `<div class="card" data-title="${item.name}" >
+  const html = `<div class="card" data-title= "${item.name}">
         <h2 class="cardtitle" >${item.name}</h2>
         <img src=${item.image} alt="">
+        <h4 class="prices" >${item.price} </h4>
         <button class="add">Add to Cart</button>
         </div>`;
   container.insertAdjacentHTML("afterbegin", html);
@@ -202,4 +203,15 @@ function category() {
 }
 category();
 
-function filterByBrand(brand) {}
+function filterByBrand(category) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const cardCategory = card.getAttribute("data-title");
+    if (category === cardCategory) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+filterByBrand("Fino");
