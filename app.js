@@ -155,7 +155,7 @@ const products = [
     name: "Firm Style",
     price: 21.25,
     inStock: true,
-    category: "Pual Mitchell",
+    category: "Paul Mitchell",
     image: "imges/FirmStyle.png",
     alt: "",
   },
@@ -166,10 +166,10 @@ const products = [
 function inject(item) {
   //query the container
   const container = document.querySelector(".container");
-  const html = `<div class="card" data-title= "${item.name}">
+  const html = `<div class="card" data-title= "${item.name}" data-category="${item.category}" data-price="${item.price}">
         <h2 class="cardtitle" >${item.name}</h2>
         <img src=${item.image} alt="">
-        <h4 class="prices" >${item.price} </h4>
+        <h4 class="prices" >$${item.price} </h4>
         <button class="add">Add to Cart</button>
         </div>`;
   container.insertAdjacentHTML("afterbegin", html);
@@ -183,8 +183,11 @@ function addToCart() {
   btnArray.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       console.log(event.target.textContent);
-      console.log(event.target.closest(".card").getAttribute("data-title"));
-      //find item in array
+      console.log(
+        event.target.closest(".card").getAttribute("data-title"),
+        event.target.closest(".card").getAttribute("data-price")
+      );
+      //find item in array: done
       //push item to cart
       //total cart
       //show cart
@@ -198,6 +201,8 @@ function category() {
   allButtons.forEach((button) => {
     button.addEventListener("click", function (event) {
       console.log(event.target.textContent);
+      const category = event.target.textContent.trim();
+      filterByBrand(category);
     });
   });
 }
@@ -206,7 +211,7 @@ category();
 function filterByBrand(category) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
-    const cardCategory = card.getAttribute("data-title");
+    const cardCategory = card.getAttribute("data-category");
     if (category === cardCategory) {
       card.style.display = "flex";
     } else {
@@ -214,4 +219,3 @@ function filterByBrand(category) {
     }
   });
 }
-filterByBrand("Fino");
