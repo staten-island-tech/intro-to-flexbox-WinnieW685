@@ -160,7 +160,7 @@ const products = [
     alt: "",
   },
 ];
-
+let cart = [];
 //create a javascript array called items, each item shouldhave the following key , anme
 
 function inject(item) {
@@ -183,11 +183,14 @@ function addToCart() {
   btnArray.forEach((btn) =>
     btn.addEventListener("click", function (event) {
       console.log(event.target.textContent);
+      const name = event.target.closest(".card").getAttribute("data-title");
       console.log(
         event.target.closest(".card").getAttribute("data-title"),
         event.target.closest(".card").getAttribute("data-price")
       );
-      //find item in array: done
+      const p = products.find((product) => product.name === name);
+      console.log("found");
+      //find item in array
       //push item to cart
       //total cart
       //show cart
