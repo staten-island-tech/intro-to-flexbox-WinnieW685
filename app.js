@@ -174,7 +174,19 @@ function inject(item) {
         </div>`;
   container.insertAdjacentHTML("afterbegin", html);
 }
-
+function showCart(item) {
+  const cart = document.querySelector(".cart");
+  const html = `<div class="cart">
+        <h4 class="cartcardtitle" >${item.name} </h4>
+        <h4 class="cartcardprice" >$${item.price} </h4>
+        </div>`;
+  cart.insertAdjacentHTML("afterbegin", html);
+}
+let cartTotal = 0;
+function total() {
+  cart.forEach((item) => (cartTotal = cartTotal + item.price));
+  console.log(cartTotal.toFixed(2));
+}
 products.forEach((product) => inject(product));
 
 function addToCart() {
@@ -190,8 +202,11 @@ function addToCart() {
       );
       const p = products.find((product) => product.name === name);
       console.log("found");
-      //find item in array
-      //push item to cart
+      cart.push(p);
+      total();
+      showCart(p);
+      //find item in = done
+      //push item to cart= done
       //total cart
       //show cart
     })
