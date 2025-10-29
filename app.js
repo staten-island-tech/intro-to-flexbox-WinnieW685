@@ -184,7 +184,18 @@ function showCart(item) {
 }
 let cartTotal = 0;
 function total() {
+  cartTotal = 0;
   cart.forEach((item) => (cartTotal = cartTotal + item.price));
+  console.log(cartTotal.toFixed(2));
+  const container = document.querySelector(".cart");
+  //
+  const oldTotal = container.querySelector(".TotalPrice");
+  if (oldTotal) {
+    oldTotal.remove();
+  }
+  const html = `<div class="TotalPrice">
+  <h4>total: ${cartTotal.toFixed(2)}</h4></div>`;
+  container.insertAdjacentHTML("beforeend", html);
 }
 products.forEach((product) => inject(product));
 
