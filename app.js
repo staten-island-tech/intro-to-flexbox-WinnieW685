@@ -185,7 +185,6 @@ function showCart(item) {
 let cartTotal = 0;
 function total() {
   cart.forEach((item) => (cartTotal = cartTotal + item.price));
-  console.log(cartTotal.toFixed(2));
 }
 products.forEach((product) => inject(product));
 
@@ -196,10 +195,7 @@ function addToCart() {
     btn.addEventListener("click", function (event) {
       console.log(event.target.textContent);
       const name = event.target.closest(".card").getAttribute("data-title");
-      console.log(
-        event.target.closest(".card").getAttribute("data-title"),
-        event.target.closest(".card").getAttribute("data-price")
-      );
+      console.log(event.target.closest(".card").getAttribute("data-title"));
       const p = products.find((product) => product.name === name);
       console.log("found");
       cart.push(p);
