@@ -5,7 +5,7 @@ body,
   margin: 0;
   box-sizing: border-box;
   font-size: 10px;
-  background-color: #edd9ca;
+  background-color: #ecf7f7;
   font-family: "DM Serif Text", serif;
 }
 
@@ -20,12 +20,12 @@ body,
   font-weight: 400;
   font-style: italic;
 }
-h1 {
+.Title1 {
   font-size: 12rem;
   text-align: center;
   margin-bottom: 20rem;
   margin-top: 10rem;
- color: #d8b396;
+ color: #9ed1e9;
 }
 
 .container {
@@ -40,9 +40,9 @@ h1 {
   width: 45%;
   height: 40rem;
   margin: 3rem 0;
-  border: 2px solid #e6bea2;
+  border: 2px solid #c9e4de;
   border-radius: 10px;
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,12 +52,13 @@ h1 {
 }
 .cardtitle {
   font-size: 40px;
-  background-color: antiquewhite;
-  color: #d4a583;
+  background-color: rgb(255, 255, 255);
+  color: #91cadb;
   text-align: center;
 }
 img {
-  width: 30%;
+  margin: 0 auto;
+  width: 30% auto;
   height: 60%;
   border-radius: 10px;
 }
@@ -76,3 +77,62 @@ img {
 @media screen and (max-width: 800px) {
 }
 
+.cartcart {
+  
+}
+.cart {
+  align-self: center;
+  width: 45% ;
+  height: 45% auto;
+  margin:  0 auto;
+  border: 2px solid #c9e4de;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top:5px ;
+}
+.cartcardprice {
+  font-size: 10px;
+  color: #c9e4de;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:5px ;
+}
+.cartcardtitle {
+  font-size: 15px;
+  color: #c9e4de;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categories {
+  margin:0 auto;
+  align-content: center;
+  border-radius: 3px;
+}
+.category {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color:#c9e4de;
+}
+.add {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color:#c9e4de;
+}
+
+.prices {
+    border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color:#c9e4de;
+}
+.TotalPrice{
+  font-size: 20%;
+  background-color: #ffffff;
+  color:#c9e4de;
+}

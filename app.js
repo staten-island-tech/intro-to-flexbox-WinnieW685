@@ -1,4 +1,4 @@
-const products = [
+dconst products = [
   {
     name: "Glycoic Gloss",
     price: 19.99,
@@ -120,7 +120,7 @@ const products = [
     alt: "",
   },
   {
-    name: "",
+    name: "Curl Enhancing",
     price: 17.5,
     inStock: true,
     category: "Shea Moisture",
@@ -194,7 +194,8 @@ function total() {
     oldTotal.remove();
   }
   const html = `<div class="TotalPrice">
-  <h4>total: ${cartTotal.toFixed(2)}</h4></div>`;
+  <h1>Total</h1>
+  <h4> ${cartTotal.toFixed(2)}</h4></div>`;
   container.insertAdjacentHTML("beforeend", html);
 }
 products.forEach((product) => inject(product));
