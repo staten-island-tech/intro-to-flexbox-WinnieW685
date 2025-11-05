@@ -1,4 +1,4 @@
-dconst products = [
+const products = [
   {
     name: "Glycoic Gloss",
     price: 19.99,
